@@ -31,7 +31,7 @@ export async function POST(req: NextRequest) {
       },
       { status: 201 }
     );
-  } catch (err: any) {
+  } catch (err: unknown) {
     console.error("Error al guardar UIX:", err);
     return NextResponse.json(
       { error: "Error interno del servidor." },
