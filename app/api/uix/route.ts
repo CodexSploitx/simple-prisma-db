@@ -5,7 +5,7 @@ import { NextRequest, NextResponse } from "next/server";
 export async function POST(req: NextRequest) {
   try {
     const body = await req.json();
-    const { name, hashtags, category, code } = body;
+    const { name, hashtags, category, code, code_animate } = body;
 
     // Validación básica
     if (!name || !Array.isArray(hashtags) || !category || !code) {
@@ -21,6 +21,7 @@ export async function POST(req: NextRequest) {
         hashtags,
         category,
         code,
+        code_animate,
       },
     });
 
