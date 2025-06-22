@@ -20,6 +20,7 @@ model uix {
   hashtags  String[]
   category  String
   code      String
+  code_animate  String
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
 }
